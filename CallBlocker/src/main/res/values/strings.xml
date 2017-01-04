@@ -1,0 +1,23 @@
+<resources>
+    <string name="AppName">CallBlocker</string>
+    <string name="TitleActivityRequestPermissions">Request Permissions</string>
+    <string name="TitleActivityContactEditor">Contact Editor</string>
+    <string name="PickAContact">Pick a contact</string>
+    <string name="NewContact">New Contact</string>
+    <string name="UpdateContact">Update Contact</string>
+    <string name="ErrorDescriptionNull">insert a description or name</string>
+    <string name="ErrorPhoneNumberIncorrect">phone number is incorrect</string>
+    <string name="ErrorContactAlreadyExist">This contact already exist in the blocked list</string>
+
+    <string name="CheckBoxContactBlock">Block this contact to not receive calls</string>
+    <string name="NoBlockedContacts">No blocked contacts</string>
+
+
+    <string-array name="Locale">
+        <item>en</item>
+        <item>US</item>
+    </string-array>
+
+
+    <string name="SharedPreferences">com.call.blocker.preferences</string>
+</resources>

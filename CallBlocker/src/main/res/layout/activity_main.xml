@@ -1,0 +1,42 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".blocker.MainActivity">
+
+    <include
+        layout="@layout/app_bar" />
+
+    <TextView
+        android:id="@+id/MainActivity_tv_noItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="@string/NoBlockedContacts"
+        android:visibility="invisible"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:textAllCaps="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/MainActivity_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="95dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/MainActivity_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_white_48dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        android:onClick="onFabClick"/>
+
+</android.support.design.widget.CoordinatorLayout>
