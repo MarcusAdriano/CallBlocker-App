@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name=".blocker.MainActivity"
+            android:name=".activity.MainActivity"
             android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,26 +28,26 @@
 
 
         <activity
-            android:name=".blocker.RequestPermissionsActivity"
+            android:name=".activity.RequestPermissionsActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/TitleActivityRequestPermissions"
-            android:parentActivityName=".blocker.MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".blocker.MainActivity" />
+                android:value=".activity.MainActivity" />
         </activity>
 
         <activity
-            android:name=".blocker.ContactEditorActivity"
+            android:name=".activity.ContactEditorActivity"
             android:label="@string/TitleActivityContactEditor"
-            android:parentActivityName=".blocker.MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".blocker.MainActivity" />
+                android:value=".activity.MainActivity" />
         </activity>
 
-        <receiver android:name=".util.ReceiveCalls"
+        <receiver android:name=".broadcast.ReceiveCalls"
                   android:exported="true"
                   android:process=":remote" >
             <intent-filter>

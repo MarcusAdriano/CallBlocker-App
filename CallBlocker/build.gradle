@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.call.blocker"
-        minSdkVersion 19
-        targetSdkVersion 24
+        minSdkVersion 15
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
@@ -23,8 +23,8 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.+'
-    compile 'com.android.support:design:24.+'
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'com.android.support:design:25.+'
     compile 'com.googlecode.libphonenumber:libphonenumber:7.5.1'
     compile 'com.googlecode.libphonenumber:carrier:1.39'
     compile 'com.googlecode.libphonenumber:prefixmapper:2.50'

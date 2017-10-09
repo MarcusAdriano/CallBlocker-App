@@ -1,7 +1,7 @@
 package com.call.util;
 
 /*
- * Copyright 2016 Marcus Adriano
+ * Copyright 2017 Marcus Adriano
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

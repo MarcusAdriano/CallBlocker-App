@@ -1,7 +1,7 @@
 package com.call.database;
 
 /*
- * Copyright 2016 Marcus Adriano
+ * Copyright 2017 Marcus Adriano
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -153,8 +153,8 @@ public class ContactDB extends SQLiteOpenHelper {
                 contact.setId(cursor.getInt(0));
                 contact.setDescription(cursor.getString(1));
                 contact.setNumber(cursor.getString(2));
-                contact.setCallBlocker(callBlocker == 1 ? true : false);
-                contact.setSmsBlocker(smsBlocker == 1 ? true : false);
+                contact.setCallBlocker(callBlocker == 1);
+                contact.setSmsBlocker(smsBlocker == 1);
 
                 Log.i(PublicKeys.TAG, "Get contact by " + KEY + " (" + VALUE + "): " + contact.getDescription() + "("
                         + contact.getNumber() + ") Callblocker: " + callBlocker +
@@ -175,7 +175,7 @@ public class ContactDB extends SQLiteOpenHelper {
      * @return list of contacts
      */
     public List<Contact> getAll() {
-        List<Contact> contacts = new ArrayList<Contact>();
+        List<Contact> contacts = new ArrayList<>();
 
         // 1. build the query
         String query = "SELECT * FROM " + TABLE_NAME;
@@ -196,8 +196,8 @@ public class ContactDB extends SQLiteOpenHelper {
                 contact.setId(cursor.getInt(0));
                 contact.setDescription(cursor.getString(1));
                 contact.setNumber(cursor.getString(2));
-                contact.setCallBlocker(callBlocker == 1 ? true : false);
-                contact.setSmsBlocker(smsBlocker == 1 ? true : false);
+                contact.setCallBlocker(callBlocker == 1);
+                contact.setSmsBlocker(smsBlocker == 1);
 
                 contacts.add(contact);
             } while (cursor.moveToNext());
@@ -208,7 +208,7 @@ public class ContactDB extends SQLiteOpenHelper {
     }
 
     public List<Contact> getAll(final String orderBy) {
-        List<Contact> contacts = new ArrayList<Contact>();
+        List<Contact> contacts = new ArrayList<>();
 
         // 1. build the query
         String query = "SELECT * FROM " + TABLE_NAME + " ORDER BY " + orderBy;
@@ -229,8 +229,8 @@ public class ContactDB extends SQLiteOpenHelper {
                 contact.setId(cursor.getInt(0));
                 contact.setDescription(cursor.getString(1));
                 contact.setNumber(cursor.getString(2));
-                contact.setCallBlocker(callBlocker == 1 ? true : false);
-                contact.setSmsBlocker(smsBlocker == 1 ? true : false);
+                contact.setCallBlocker(callBlocker == 1);
+                contact.setSmsBlocker(smsBlocker == 1);
 
                 contacts.add(contact);
             } while (cursor.moveToNext());
