@@ -11,3 +11,8 @@ android:
 
     # The SDK version used to compile your project
     - android-25
+    - tools
+    - platform-tools
+    - extra-google-m2repository
+    - extra-android-m2repository # for design library
+    - addon-google_apis-google-19 # google play services
