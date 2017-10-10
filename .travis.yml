@@ -19,4 +19,4 @@ android:
 
 script:
 
-    - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
+    - "gradle clean build connectedCheck --stacktrace"
