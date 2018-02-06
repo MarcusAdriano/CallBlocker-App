@@ -1,4 +1,4 @@
-package com.call.activity;
+package com.marcus.callblocker.view.activity;
 
 /*
  * Copyright 2017 Marcus Adriano
@@ -30,11 +30,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.call.R;
-import com.call.adapter.CallRecyclerAdapter;
-import com.call.database.ContactDB;
-import com.call.util.DividerItemDecoration;
-import com.call.util.PublicKeys;
+import com.marcus.callblocker.R;
+import com.marcus.callblocker.view.adapter.CallRecyclerAdapter;
+import com.marcus.callblocker.db.ContactDB;
+import com.marcus.util.DividerItemDecoration;
+import com.marcus.util.PublicKeys;
 
 public class MainActivity extends AppCompatActivity {
 

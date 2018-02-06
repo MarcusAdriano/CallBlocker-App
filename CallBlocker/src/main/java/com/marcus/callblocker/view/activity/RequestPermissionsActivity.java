@@ -1,4 +1,4 @@
-package com.call.activity;
+package com.marcus.callblocker.view.activity;
 
 /*
  * Copyright 2016 Marcus Adriano
@@ -26,8 +26,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
-import com.call.R;
-import com.call.util.PublicKeys;
+import com.marcus.callblocker.R;
+import com.marcus.util.PublicKeys;
 
 public class RequestPermissionsActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class RequestPermissionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_permissions);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

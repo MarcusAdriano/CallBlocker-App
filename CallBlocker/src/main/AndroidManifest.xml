@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.call">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.marcus.callblocker">
 
-    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
@@ -10,14 +12,15 @@
 
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/AppName"
         android:supportsRtl="true"
+        android:fullBackupContent="true"
+        android:allowBackup="true"
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".view.activity.MainActivity"
             android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,26 +31,26 @@
 
 
         <activity
-            android:name=".activity.RequestPermissionsActivity"
+            android:name=".view.activity.RequestPermissionsActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/TitleActivityRequestPermissions"
-            android:parentActivityName=".activity.MainActivity">
+            android:parentActivityName=".view.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value=".view.activity.MainActivity" />
         </activity>
 
         <activity
-            android:name=".activity.ContactEditorActivity"
+            android:name=".view.activity.ContactEditorActivity"
             android:label="@string/TitleActivityContactEditor"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".view.activity.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value=".view.activity.MainActivity" />
         </activity>
 
-        <receiver android:name=".broadcast.ReceiveCalls"
+        <receiver android:name="com.marcus.ReceiveCalls"
                   android:exported="true"
                   android:process=":remote" >
             <intent-filter>

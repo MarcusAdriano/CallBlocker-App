@@ -1,4 +1,4 @@
-package com.call.activity;
+package com.marcus.callblocker.view.activity;
 
 /*
  * Copyright 2017 Marcus Adriano
@@ -34,16 +34,16 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.call.R;
-import com.call.blocker.Contact;
-import com.call.database.ContactDB;
-import com.call.util.PublicKeys;
+import com.marcus.callblocker.R;
+import com.marcus.callblocker.model.Contact;
+import com.marcus.callblocker.db.ContactDB;
+import com.marcus.util.PublicKeys;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 
 import java.util.Locale;
 
-import com.call.util.CurrentLocale;
+import com.marcus.util.CurrentLocale;
 import com.google.i18n.phonenumbers.Phonenumber;
 
 public class ContactEditorActivity extends AppCompatActivity {

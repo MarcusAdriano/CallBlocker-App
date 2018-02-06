@@ -1,4 +1,4 @@
-package com.call.broadcast;
+package com.marcus;
 
 /*
  * Copyright 2016 Marcus Adriano
@@ -25,16 +25,17 @@ import android.util.Log;
 
 import java.lang.reflect.Method;
 
-import com.call.blocker.Contact;
-import com.call.database.ContactDB;
-import com.call.util.CurrentLocale;
-import com.call.util.PublicKeys;
+import com.marcus.callblocker.model.Contact;
+import com.marcus.callblocker.db.ContactDB;
+import com.marcus.util.CurrentLocale;
+import com.marcus.util.PublicKeys;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 
 /**
  * Created by Marcus on 20/07/2016.
+ *
  */
 public class ReceiveCalls extends BroadcastReceiver {
 

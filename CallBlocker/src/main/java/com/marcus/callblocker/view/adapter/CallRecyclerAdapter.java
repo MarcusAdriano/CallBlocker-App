@@ -1,4 +1,4 @@
-package com.call.adapter;
+package com.marcus.callblocker.view.adapter;
 
 /*
  * Copyright 2017 Marcus Adriano
@@ -29,19 +29,19 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import com.call.blocker.Contact;
-import com.call.R;
-import com.call.database.ContactDB;
-import com.call.util.CurrentLocale;
-import com.call.util.PublicKeys;
+import com.marcus.callblocker.R;
+import com.marcus.callblocker.model.Contact;
+import com.marcus.callblocker.db.ContactDB;
+import com.marcus.util.CurrentLocale;
+import com.marcus.util.PublicKeys;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 
 /**
  * Created by Marcus on 28/07/2016.
+ *
  */
-
 public class CallRecyclerAdapter
             extends RecyclerView.Adapter<CallRecyclerAdapter.ViewHolder> {
 

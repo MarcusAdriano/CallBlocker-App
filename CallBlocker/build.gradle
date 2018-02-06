@@ -1,35 +1,66 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.3'
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.call.blocker"
-        minSdkVersion 19
-        targetSdkVersion 25
+        applicationId 'com.marcus.callblocker'
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
-        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.+'
-    compile 'com.android.support:design:25.+'
-    compile 'com.googlecode.libphonenumber:libphonenumber:7.5.1'
-    compile 'com.googlecode.libphonenumber:carrier:1.39'
-    compile 'com.googlecode.libphonenumber:prefixmapper:2.50'
+    // Support libraries
+    implementation deps.support.app_compat
+    implementation deps.support.design
+
+    // Architecture components
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+    androidTestImplementation deps.room.testing
+    androidTestImplementation deps.arch_core.testing
+
+    // Espresso UI Testing
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    // Resolve conflicts between main and test APK:
+    androidTestImplementation deps.support.annotations
+    androidTestImplementation deps.support.app_compat
+    androidTestImplementation deps.support.design
+
+    // LibPhone Number
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.0.0'
+    implementation 'com.googlecode.libphonenumber:carrier:1.39'
+    implementation 'com.googlecode.libphonenumber:prefixmapper:2.50'
 
 }
